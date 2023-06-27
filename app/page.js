@@ -1,7 +1,7 @@
 import SignIn from "./sign_in";
-import { Matter } from "next/font/google";
+import localFont from "next/font/local";
 
-const matter = Matter({ subsets: ["latin"] });
+const matter = localFont({ src: "./matter_font/Matter-Regular.ttf" });
 export default function Home() {
   return (
     <main
