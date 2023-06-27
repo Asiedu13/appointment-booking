@@ -2,6 +2,7 @@ import Link from "next/link";
 import localFont from "next/font/local";
 import Image from "next/image";
 import google_img from "./media/imgs/google logo.svg";
+import eye_icon from "./media/imgs/eye_icon.svg";
 const matterHeavy = localFont({ src: "./matter_font/Matter-Heavy.ttf" });
 import TextInput from "../components/input";
 import CustomBtn from "../components/button";
@@ -53,19 +54,19 @@ export default function SignIn() {
             type="text"
             placeholder="johndoe@example.com"
           />
-          <div>
+          <div >
             <TextInput name="Password" type="password">
               <Image
-                src="./media/imgs/eye_icon.svg"
+                src={eye_icon}
                 alt="show hidden password icon"
-                width={200}
-                height={200}
+                width={20}
+                height={10}
               />
             </TextInput>
-            <Link href="/forgot" className="ml-[63%] font-semibold">
-              Forgot password?
-            </Link>
           </div>
+          <Link href="/forgot" className="ml-[63%] font-semibold">
+            Forgot password?
+          </Link>
 
           <SubmitButton>Sign in</SubmitButton>
         </section>
