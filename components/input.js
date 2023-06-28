@@ -1,5 +1,5 @@
 export default function textInput(props) {
-  let defType = props.type;
+  let defType = props.visible ? "text" : props.type;
   return (
     <div className="flex flex-col ">
       <label className="text-sm">{props.name}</label>
