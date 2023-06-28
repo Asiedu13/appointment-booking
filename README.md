@@ -81,7 +81,6 @@ Further on in this project, I would like to
 ### Useful resources
 
 - [Tailwind official docs](https://tailwindcss.com/docs/installation) - This helped me with using tailwindcss for the project. I really liked the simplicity and the ctrl + K shortcut for searching.
-
 - [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 - [Successful Git Model](https://nvie.com/posts/a-successful-git-branching-model/)
