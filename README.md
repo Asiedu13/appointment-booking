@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![The Solution](./public/weather-snap.png)
+![The Solution](./public/built-appointment-ui.png)
 
 ### Links
 
