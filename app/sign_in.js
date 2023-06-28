@@ -1,9 +1,9 @@
 import Link from "next/link";
-import localFont from "next/font/local";
 import Image from "next/image";
+
 import google_img from "./media/imgs/google logo.svg";
 import eye_icon from "./media/imgs/eye_icon.svg";
-const matterHeavy = localFont({ src: "./matter_font/Matter-Heavy.ttf" });
+import RegHeader from "../components/RegistrationHeader";
 import TextInput from "../components/input";
 import CustomBtn from "../components/button";
 import { SubmitButton } from "../components/button";
@@ -13,26 +13,7 @@ export default function SignIn() {
     <section className="flex justify-center items-center  h-screen">
       <div className="max-w-[100%] w-[440px] h-[519px] shadow-md rounded-2xl bg-[#fff] p-10 ">
         {/* Greetingd */}
-        <header className="flex flex-col justify-center items-center ">
-          <h1
-            className={` ${matterHeavy.className} text-3xl font-black mb-[16px]`}
-          >
-            Welcome back
-          </h1>
-          <div id="a_bit_lost" className="flex justify-center items-center ">
-            <p className="text-[#AAAFAE] text-sm">New to bookings.com?</p>
-            <span>
-              <Link
-                href="/sign_up"
-                className="font-semibold text-sm flex justify-center items-center"
-              >
-                {" "}
-                &nbsp; Create an account
-              </Link>
-            </span>
-          </div>
-        </header>
-
+        <RegHeader />
         {/* Sign in content */}
 
         <section className="w-[360px] h-[364px] mt-[32px]">
@@ -69,6 +50,7 @@ export default function SignIn() {
               />
             </TextInput>
           </div>
+
           <Link href="/forgot" className="ml-[67%] font-semibold text-sm">
             Forgot password?
           </Link>
