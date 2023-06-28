@@ -10,17 +10,23 @@ import { SubmitButton } from "../components/button";
 
 export default function SignIn() {
   return (
-    <section className="flex justify-center items-center border-solid border-blue-100 border-2 h-screen">
-      <div className="max-w-5xl w-[440px] h-[519px] shadow-md rounded-2xl bg-[#fff] p-10 ">
+    <section className="flex justify-center items-center  h-screen">
+      <div className="max-w-[100%] w-[440px] h-[519px] shadow-md rounded-2xl bg-[#fff] p-10 ">
         {/* Greetingd */}
-        <header className="flex flex-col justify-center items-center">
-          <h1 className={` ${matterHeavy.className} text-3xl font-black`}>
+        <header className="flex flex-col justify-center items-center ">
+          <h1 className={` ${matterHeavy.className} text-3xl font-black mb-[16px]`}>
             Welcome back
           </h1>
-          <div id="a_bit_lost" className="flex justify-center items-center">
+          <div
+            id="a_bit_lost"
+            className="flex justify-center items-center "
+          >
             <p className="text-[#AAAFAE] text-sm">New to bookings.com?</p>
             <span>
-              <Link href="/sign_up" className="font-normal text-sm">
+              <Link
+                href="/sign_up"
+                className="font-semibold text-sm flex justify-center items-center"
+              >
                 {" "}
                 &nbsp; Create an account
               </Link>
@@ -54,8 +60,8 @@ export default function SignIn() {
             type="text"
             placeholder="johndoe@example.com"
           />
-          <div >
-            <TextInput name="Password" type="password">
+          <div>
+            <TextInput name="Password" type="password" extraStyles={''}>
               <Image
                 src={eye_icon}
                 alt="show hidden password icon"
@@ -64,7 +70,7 @@ export default function SignIn() {
               />
             </TextInput>
           </div>
-          <Link href="/forgot" className="ml-[63%] font-semibold">
+          <Link href="/forgot" className="ml-[67%] font-semibold text-sm">
             Forgot password?
           </Link>
 
