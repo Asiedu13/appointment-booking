@@ -14,7 +14,8 @@ export default function SignIn() {
   const [passWord, setPassword] = useState();
   const [visible, setVisible] = useState(false)
   return (
-    <section className="flex justify-center items-center  h-screen">
+    <section className="flex flex-col justify-center items-center  h-screen">
+      <h1 className='mb-[40px] font-semibold'>Bookings.com</h1>
       <div className="max-w-[100%] w-[440px] h-[519px] shadow-md rounded-2xl bg-[#fff] p-10 ">
         {/* Greetingd */}
         <RegHeader />
