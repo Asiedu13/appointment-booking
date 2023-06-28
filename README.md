@@ -41,7 +41,7 @@ I used Next.js because of the extra features Next.js gives to a React applicatio
 
 
 ### Planning the Layouts
-Using a design on Figma, I had to plan the elements to group together and the ones that would be standalone as well as the how the project files would be structured for easier interaction.
+Using a design on Figma, I planned the elements to group together and the ones that would be standalone as well as the how the project files would be structured for easier interaction.
 ### Building the Views 
 I then wrote code for everything planned and still planning
 ### Built with
@@ -82,7 +82,9 @@ Further on in this project, I would like to
 
 - [Tailwind official docs](https://tailwindcss.com/docs/installation) - This helped me with using tailwindcss for the project. I really liked the simplicity and the ctrl + K shortcut for searching.
 
--[Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+- [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+- [Successful Git Model](https://nvie.com/posts/a-successful-git-branching-model/)
 
 **However, I am open to alternatives so reach out to me if you have any.**
 
