@@ -56,7 +56,7 @@ I then wrote code for everything planned and still planning
 This project helped me apply the various features of Next. From file based routing to all the optimizations Next undertakes to keep the application fast at all levels.
 
 This project also allowed me to
-- implement tailwindcss in a Next app
+- Implement tailwindcss in a Next app
 - Diligently follow a FIGMA UI under supervision.
 
 
