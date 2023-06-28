@@ -3,7 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from 'react';
 import google_img from "./media/imgs/google logo.svg";
-import eye_icon from "./media/imgs/eye_icon.svg";
+import eye_on from "./media/imgs/eye_icon.svg";
+import eye_off from "./media/imgs/eye-off.svg";
 import RegHeader from "../components/RegistrationHeader";
 import TextInput from "../components/input";
 import CustomBtn from "../components/button";
@@ -46,7 +47,7 @@ export default function SignIn() {
           <div>
             <TextInput name="Password" type="password" visible={visible}>
               <Image
-                src={eye_icon}
+                src={visible ? eye_off : eye_on}
                 alt="show hidden password icon"
                 width={20}
                 height={10}
