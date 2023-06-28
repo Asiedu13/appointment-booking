@@ -1,6 +1,7 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
-
+import { useState } from 'react';
 import google_img from "./media/imgs/google logo.svg";
 import eye_icon from "./media/imgs/eye_icon.svg";
 import RegHeader from "../components/RegistrationHeader";
@@ -9,6 +10,8 @@ import CustomBtn from "../components/button";
 import { SubmitButton } from "../components/button";
 
 export default function SignIn() {
+  const [passWord, setPassword] = useState();
+  const [visible, setVisible] = useState(false)
   return (
     <section className="flex justify-center items-center  h-screen">
       <div className="max-w-[100%] w-[440px] h-[519px] shadow-md rounded-2xl bg-[#fff] p-10 ">
@@ -41,12 +44,13 @@ export default function SignIn() {
             placeholder="johndoe@example.com"
           />
           <div>
-            <TextInput name="Password" type="password">
+            <TextInput name="Password" type="password" visible={visible}>
               <Image
                 src={eye_icon}
                 alt="show hidden password icon"
                 width={20}
                 height={10}
+                onClick={()=> setVisible(!visible)}
               />
             </TextInput>
           </div>
