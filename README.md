@@ -32,17 +32,16 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github Link (currently private)](https://github.com/Asiedu13/weather-app)
-- Live Site URL: [Weather App](https://weather-app-asiedu13.vercel.app/)
+- Solution URL: [Github Link](https://github.com/Asiedu13/appointment-booking)
+- Live Site URL: [Appointment Booking UI](https://appointment-booking-hazel.vercel.app/)
 
 ## My process
 ### Selecting the Tools / Technologies
-I decided to use Next.js because of the extra features Next.js gives to a React application and it was a requirement.
+I used Next.js because of the extra features Next.js gives to a React application and it was a requirement.
 
 
 ### Planning the Layouts
-The.
-
+Using a design on Figma, I had to plan the elements to group together and the ones that would be standalone as well as the how the project files would be structured for easier interaction.
 ### Building the Views 
 I then wrote code for everything planned and still planning
 ### Built with
@@ -57,8 +56,9 @@ I then wrote code for everything planned and still planning
 This project helped me apply the various features of Next. From file based routing to all the optimizations Next undertakes to keep the application fast at all levels.
 
 This project also allowed me to
-- working with APIs to achieve a goal
 - implement tailwindcss in a Next app
+- Diligently follow a FIGMA UI under supervision.
+
 
 
 
@@ -75,7 +75,7 @@ This project also allowed me to
 ### Continued development
 Further on in this project, I would like to
 - Integrate with an API to authenticate users
-- Enable toggle visibility of password field
+- Enable toggle visibility of password field.
 - Improve mobile responsiveness
 - Include transitions for a better experience
 ### Useful resources
