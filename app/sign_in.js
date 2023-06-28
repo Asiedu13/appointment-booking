@@ -16,7 +16,7 @@ export default function SignIn() {
         <RegHeader />
 
       {/******* Sign in content ***********/}
-        <section className="w-[360px] h-[364px] mt-[32px]">
+        <section className="w-[97%] h-[364px] mt-[32px] ">
       {/* Signing in with google */}
           <CustomBtn>
             <Image src={google_img} alt="Google logo" /> &nbsp; Sign in with
@@ -25,11 +25,11 @@ export default function SignIn() {
 
           {/* or */}
           <div className=" flex items-center justify-around relative mb-[10px]">
-            <div className="float-left w-[45%] mr-2">
+            <div className="float-left w-[40%] mr-2">
               <hr />
             </div>
             <p className="text-[#808785]">or</p>
-            <div className="float-right ml-2 w-[45%]">
+            <div className="float-right ml-2 w-[40%]">
               <hr />
             </div>
           </div>
