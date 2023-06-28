@@ -51,7 +51,7 @@ export default function SignIn() {
             </TextInput>
           </div>
 
-          <Link href="/forgot" className="ml-[67%] font-semibold text-sm">
+          <Link href="/forgot" className="ml-[62%] md:ml-[67%] font-semibold text-sm">
             Forgot password?
           </Link>
 
