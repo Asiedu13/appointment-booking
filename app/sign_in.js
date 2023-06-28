@@ -15,9 +15,9 @@ export default function SignIn() {
         {/* Greetingd */}
         <RegHeader />
 
-      {/******* Sign in content ***********/}
+        {/******* Sign in content ***********/}
         <section className="w-[97%] h-[364px] mt-[32px] ">
-      {/* Signing in with google */}
+          {/* Signing in with google */}
           <CustomBtn>
             <Image src={google_img} alt="Google logo" /> &nbsp; Sign in with
             Google
@@ -51,7 +51,10 @@ export default function SignIn() {
             </TextInput>
           </div>
 
-          <Link href="/forgot" className="ml-[62%] md:ml-[67%] font-semibold text-sm">
+          <Link
+            href="/forgot"
+            className="ml-[55%]  font-semibold text-sm md:ml-[65%]"
+          >
             Forgot password?
           </Link>
 
