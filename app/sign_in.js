@@ -14,13 +14,12 @@ export default function SignIn() {
       <div className="max-w-[100%] w-[440px] h-[519px] shadow-md rounded-2xl bg-[#fff] p-10 ">
         {/* Greetingd */}
         <header className="flex flex-col justify-center items-center ">
-          <h1 className={` ${matterHeavy.className} text-3xl font-black mb-[16px]`}>
+          <h1
+            className={` ${matterHeavy.className} text-3xl font-black mb-[16px]`}
+          >
             Welcome back
           </h1>
-          <div
-            id="a_bit_lost"
-            className="flex justify-center items-center "
-          >
+          <div id="a_bit_lost" className="flex justify-center items-center ">
             <p className="text-[#AAAFAE] text-sm">New to bookings.com?</p>
             <span>
               <Link
@@ -61,7 +60,7 @@ export default function SignIn() {
             placeholder="johndoe@example.com"
           />
           <div>
-            <TextInput name="Password" type="password" extraStyles={''}>
+            <TextInput name="Password" type="password" extraStyles={""}>
               <Image
                 src={eye_icon}
                 alt="show hidden password icon"
