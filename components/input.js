@@ -12,7 +12,7 @@ export default function textInput(props) {
           autoComplete="off"
         />{" "}
         {props.type == "password" ? (
-          <div className="bordersolid border-2 border-[#CCCFCE66] border-y-0 border-r-0 p-2 cursor-pointer flex items-center w-[40px]">
+          <div className="border-solid border-2 border-[#CCCFCE66] border-y-0 border-r-0 p-2 cursor-pointer flex items-center w-[40px]">
             {props.children || ""}
           </div>
         ) : (

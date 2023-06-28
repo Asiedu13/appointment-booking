@@ -14,10 +14,10 @@ export default function SignIn() {
       <div className="max-w-[100%] w-[440px] h-[519px] shadow-md rounded-2xl bg-[#fff] p-10 ">
         {/* Greetingd */}
         <RegHeader />
-        {/* Sign in content */}
 
+      {/******* Sign in content ***********/}
         <section className="w-[360px] h-[364px] mt-[32px]">
-          {/* Signing in with google */}
+      {/* Signing in with google */}
           <CustomBtn>
             <Image src={google_img} alt="Google logo" /> &nbsp; Sign in with
             Google
@@ -34,14 +34,14 @@ export default function SignIn() {
             </div>
           </div>
 
-          {/* Sign in by mail */}
+          {/********* Sign in the traditional way ************/}
           <TextInput
             name="Email"
             type="text"
             placeholder="johndoe@example.com"
           />
           <div>
-            <TextInput name="Password" type="password" extraStyles={""}>
+            <TextInput name="Password" type="password">
               <Image
                 src={eye_icon}
                 alt="show hidden password icon"
