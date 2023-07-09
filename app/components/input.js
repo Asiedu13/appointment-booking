@@ -1,4 +1,5 @@
-export default function textInput(props) {
+
+export default function textInput( props ) {
   let defType = props.visible ? "text" : props.type;
   return (
     <div className="flex flex-col ">
@@ -12,6 +13,8 @@ export default function textInput(props) {
           name={props.name}
           placeholder={props.placeholder || " "}
           autoComplete="off"
+          value={props.value}
+          onChange={( e ) => props.onChange( e.target.value, props.name.toLowerCase() )}
         />{" "}
         {props.type == "password" ? (
           <div className="border-solid border-2 border-[#CCCFCE66] border-y-0 border-r-0 p-2 absolute cursor-pointer flex justify-center items-center w-[50px] right-0 md:w-[15%]">
