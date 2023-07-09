@@ -1,21 +1,22 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from 'react';
+import { useState } from "react";
+import { signIn } from "next-auth/react";
 import google_img from "./media/imgs/google logo.svg";
 import eye_on from "./media/imgs/eye_icon.svg";
 import eye_off from "./media/imgs/eye-off.svg";
-import RegHeader from "../components/RegistrationHeader";
-import TextInput from "../components/input";
-import CustomBtn from "../components/button";
-import { SubmitButton } from "../components/button";
+import RegHeader from "./components/RegistrationHeader";
+import TextInput from "./components/input";
+import CustomBtn from "./components/button";
+import { SubmitButton } from "./components/button";
 
 export default function SignIn() {
   const [passWord, setPassword] = useState();
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
   return (
     <section className="flex flex-col justify-center items-center  h-screen">
-      <h1 className='mb-[40px] font-semibold'>Bookings.com</h1>
+      <h1 className="mb-[40px] font-semibold">Bookings.com</h1>
       <div className="max-w-[100%] w-[440px] h-[519px] shadow-md rounded-2xl bg-[#fff] p-10 ">
         {/* Greetingd */}
         <RegHeader />
@@ -23,10 +24,18 @@ export default function SignIn() {
         {/******* Sign in content ***********/}
         <section className="w-[97%] h-[364px] mt-[32px] ">
           {/* Signing in with google */}
-          <CustomBtn>
-            <Image src={google_img} alt="Google logo" /> &nbsp; Sign in with
-            Google
-          </CustomBtn>
+          <Link
+            href="/api/auth/signin"
+            onClick={(e) => {
+              e.preventDefault();
+              signIn('google', {callbackUrl: '/home'});
+            }}
+          >
+            <CustomBtn>
+              <Image src={google_img} alt="Google logo" /> &nbsp; Sign in with
+              Google
+            </CustomBtn>
+          </Link>
 
           {/* or */}
           <div className=" flex items-center justify-around relative mb-[10px]">
@@ -52,7 +61,7 @@ export default function SignIn() {
                 alt="show hidden password icon"
                 width={20}
                 height={10}
-                onClick={()=> setVisible(!visible)}
+                onClick={() => setVisible(!visible)}
               />
             </TextInput>
           </div>
