@@ -59,7 +59,7 @@ export default function SignIn() {
             href="/api/auth/signin"
             onClick={(e) => {
               e.preventDefault();
-              signIn("google", { callbackUrl: "/home" });
+              signIn("google", { callbackUrl: "/" });
             }}
           >
             <CustomBtn>
