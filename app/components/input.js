@@ -7,7 +7,7 @@ export default function textInput(props) {
         <input
           className="flex focus:ring-blue-500 focus:border-blue-500 h-[40px] pl-3 border-gray-300 focus:outline-none 
           text-gray-400 pr-1 font-mono 
-          border-2 border-solid js-password sm:w-[100%] md:w-[100%]"
+           js-password sm:w-[100%] md:w-[100%]"
           type={defType}
           name={props.name}
           placeholder={props.placeholder || " "}
