@@ -2,18 +2,49 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { signIn } from "next-auth/react";
-import google_img from "./media/imgs/google logo.svg";
-import eye_on from "./media/imgs/eye_icon.svg";
-import eye_off from "./media/imgs/eye-off.svg";
-import RegHeader from "./components/RegistrationHeader";
-import TextInput from "./components/input";
-import CustomBtn from "./components/button";
-import { SubmitButton } from "./components/button";
+import { toast } from 'react-toastify';
+import { signIn, getProviders } from "next-auth/react";
+import google_img from "../media/imgs/google logo.svg";
+import eye_on from "../media/imgs/eye_icon.svg";
+import eye_off from "../media/imgs/eye-off.svg";
+import RegHeader from "../components/RegistrationHeader";
+import TextInput from "../components/input";
+import CustomBtn from "../components/button";
+import { SubmitButton } from "../components/button";
 
 export default function SignIn() {
-  const [passWord, setPassword] = useState();
+  const [userInfo, setUserInfo] = useState({ email: "", password: "" });
   const [visible, setVisible] = useState(false);
+
+  const handleChange = (value, item) => {
+    console.log(value, item);
+    setUserInfo({ ...userInfo, [item]: value });
+    console.log(userInfo);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log("I am submitting the name of talkatives");
+    const res = await signIn("credentials", {
+      email: userInfo.email,
+      password: userInfo.password,
+      redirect: false
+    });
+
+    console.log( res )
+    if ( res.error ) {
+      toast('Invalid email or password', {hideProgressBar: true, autoClose: 2000, type: 'error', position: 'top-right'})
+      
+    } else {
+       toast("Sign in successful", {
+         hideProgressBar: true,
+         autoClose: 2000,
+         type: "success",
+         position: "top-right",
+       });
+    }
+    
+  };
   return (
     <section className="flex flex-col justify-center items-center  h-screen">
       <h1 className="mb-[40px] font-semibold">Bookings.com</h1>
@@ -28,7 +59,7 @@ export default function SignIn() {
             href="/api/auth/signin"
             onClick={(e) => {
               e.preventDefault();
-              signIn('google', {callbackUrl: '/home'});
+              signIn("google", { callbackUrl: "/" });
             }}
           >
             <CustomBtn>
@@ -53,9 +84,17 @@ export default function SignIn() {
             name="Email"
             type="text"
             placeholder="johndoe@example.com"
+            onChange={handleChange}
+            value={userInfo.email}
           />
           <div>
-            <TextInput name="Password" type="password" visible={visible}>
+            <TextInput
+              name="Password"
+              type="password"
+              visible={visible}
+              onChange={handleChange}
+              value={userInfo.password}
+            >
               <Image
                 src={visible ? eye_off : eye_on}
                 alt="show hidden password icon"
@@ -73,7 +112,7 @@ export default function SignIn() {
             Forgot password?
           </Link>
 
-          <SubmitButton>Sign in</SubmitButton>
+          <SubmitButton onSubmit={handleSubmit}>Sign in</SubmitButton>
         </section>
       </div>
     </section>
