@@ -21,7 +21,7 @@ export const authOptions = {
           },
         });
         const user = res.json();
-
+        
         if (res.ok && user) {
           res.status(200).json(user);
         }
