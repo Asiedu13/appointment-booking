@@ -31,8 +31,18 @@ export default function SignIn() {
       redirect: false
     });
 
-    
-    toast('Toast is good', {hideProgressBar:true, autoClose: 2000, type: 'success', position: 'bottom-right'})
+    console.log( res )
+    if ( res.error ) {
+      toast('Invalid email or password', {hideProgressBar: true, autoClose: 2000, type: 'error', position: 'top-right'})
+      
+    } else {
+       toast("Sign in successful", {
+         hideProgressBar: true,
+         autoClose: 2000,
+         type: "success",
+         position: "top-right",
+       });
+    }
     
   };
   return (
