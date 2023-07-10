@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { toast } from 'react-toastify';
 import { signIn, getProviders } from "next-auth/react";
 import google_img from "../media/imgs/google logo.svg";
 import eye_on from "../media/imgs/eye_icon.svg";
@@ -29,6 +30,10 @@ export default function SignIn() {
       password: userInfo.password,
       redirect: false
     });
+
+    
+    toast('Toast is good', {hideProgressBar:true, autoClose: 2000, type: 'success', position: 'bottom-right'})
+    
   };
   return (
     <section className="flex flex-col justify-center items-center  h-screen">
