@@ -24,7 +24,8 @@ export default function SignIn() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("I am submitting the name of talkatives");
+    console.log( "I am submitting the name of talkatives" );
+    
     const res = await signIn("credentials", {
       email: userInfo.email,
       password: userInfo.password,
@@ -59,7 +60,7 @@ export default function SignIn() {
             href="/api/auth/signin"
             onClick={(e) => {
               e.preventDefault();
-              signIn("google", { callbackUrl: "/" });
+              signIn("google", {redirect:false, callbackUrl: "/home" });
             }}
           >
             <CustomBtn>
